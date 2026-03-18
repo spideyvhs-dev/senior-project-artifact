@@ -7,10 +7,7 @@ import { useState } from "react";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/drake-maye", label: "Drake Maye" },
-  { href: "/dynasty-and-fall", label: "The Dynasty & Fall" },
   { href: "/the-rebuild", label: "The Rebuild" },
-  { href: "/espn-debate", label: "ESPN Debate" },
-  { href: "/fun-facts", label: "Fun Facts" },
 ];
 
 export default function Navigation() {
@@ -21,7 +18,6 @@ export default function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-pats-darker/95 backdrop-blur-md border-b border-pats-navy/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo / Brand */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="w-10 h-10 rounded-lg bg-pats-red flex items-center justify-center font-black text-white text-lg tracking-tighter group-hover:scale-105 transition-transform">
               PP
@@ -31,7 +27,6 @@ export default function Navigation() {
             </span>
           </Link>
 
-          {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
@@ -48,7 +43,6 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* Mobile Hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden p-2 text-pats-silver hover:text-white transition-colors"
@@ -80,7 +74,6 @@ export default function Navigation() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {mobileOpen && (
         <div className="md:hidden bg-pats-darker border-t border-pats-navy/50">
           <div className="px-4 py-3 space-y-1">
