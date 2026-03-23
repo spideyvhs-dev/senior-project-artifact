@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navigation from "./components/Navigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "The Pats Pod | Senior Project by Beckett Baldwin",
   description:
-    "An interactive exploration of Drake Maye, the Patriots rebuild, and the restoration of a dynasty. BHS Senior Project by Beckett Baldwin.",
+    "How Drake Maye and the New England Patriots went from 4-13 to Super Bowl LX. BHS Senior Project by Beckett Baldwin.",
 };
 
 export default function RootLayout({
@@ -29,7 +28,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navigation />
         <main className="min-h-screen">{children}</main>
       </body>
     </html>
